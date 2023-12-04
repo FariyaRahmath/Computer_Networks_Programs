@@ -17,15 +17,15 @@ class Crc
 		System.out.println("\nPlease enter the received code word: ");
 		String rec=br.readLine();
 		if(Integer.parseInt(div(rec, gen))==0)
-		System.out.println("\nThe received code word contains NO Errors\n");
+		System.out.println("\nThe received code word contains NO Errors.\n");
 		else
-		System.out.println("\nThe received code word contains Errors\n");
+		System.out.println("\nThe received code word contains Errors.\n");
 	}
 	static String div(String num1, String num2)
 	{
 		int pointer=num2.length();
 		String result=num1.substring(0, pointer);
-		String remainder=" ";
+		String remainder="";
 		for (int i=0; i<num2.length(); i++)
 		{
 			if (result.charAt(i)==num2.charAt(i))
@@ -42,7 +42,7 @@ class Crc
 				pointer++;
 			}
 			result=remainder;
-			remainder=" ";
+			remainder="";
 			for(int i=0; i<num2.length(); i++)
 			{
 				if (result.charAt(i)==num2.charAt(i))
